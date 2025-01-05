@@ -1,0 +1,15 @@
+#include <stdio.h>
+int max(int a, int b);
+int main() {
+    // Write C code here
+    int x,y,z;
+    scanf("%d %d", &x,&y);
+    z=max(x,y);
+    printf("output is = %d", z);
+
+    return 0;
+}
+//checking the ternary operator as a replacement of ifelse(sometimes)
+int max(int a, int b){
+    return(a>b) ? a:b;
+}

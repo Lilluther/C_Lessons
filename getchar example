@@ -1,0 +1,12 @@
+// Programiz editor
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int c;
+    printf("enter a character \n");
+    c=getchar(); //to collect a single character from the console
+    printf("the character is:");
+    putchar(c); //display a single character to the console
+    return 0;
+}

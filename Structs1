@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+#include <string.h> //without this headerfile we will have implicit declaration problems in strcpy
+
+typedef struct{
+   int year;
+   int units;
+   char address[50];
+}Student;
+
+int main() {
+    
+    //a way to assign values to struct members
+    Student joe ={
+        .year=4, //check on this comma
+        .units=6
+    };
+    strcpy(joe.address,"0712345678"); //passing a string literal
+    printf("%s" ,joe.address); //note the string format specifiers
+
+    return 0;
+}

@@ -1,0 +1,24 @@
+// array of structs
+#include <stdio.h>
+typedef struct{ //normal declaration of our struct, note the typedef
+    int x;
+    int y;
+    int z;
+}Points;
+void print(Points point[]);
+int main() {
+   Points one [5];  // initializing an array Points of the type struct
+   for(int i=0;i<5;i++) //   a for loop to initialize the points in each of the elements                   of the struct array
+       { one[i].x=i;
+            one[i].y=i+1;
+                 one[i].z=i*i;
+       }
+    print(one);
+
+    return 0;
+}
+
+void print(Points point[]){
+    for (int i=0;i<5;i++)
+        printf("P[%d]= %d,%d \n",i,point[i].x,point[i].y);
+}

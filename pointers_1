@@ -1,0 +1,26 @@
+// Portfolio Course on Pointers
+#include <stdio.h>
+
+void swap(int *a, int *b);
+int main() {
+int a,b,c;
+a=b=c=0;//its possible to intializ values like this
+a=5;
+b=4;
+swap(&a,&b);
+printf("%d,%d" ,a,b);
+int x=10;//pass value differectly
+int *y=&x;// the variable y stores the address of x
+
+*y=2;//this is dereferencing a  pointer its a way of accessing the value stored in another variable implicitly
+
+
+    return 0;
+}
+void swap(int *a, int *b){//initializing a function that accepts addresses of a and b as argument
+int temp =0;//initializing a temporary variable
+temp=*a;
+*a=*b;
+*b=temp;//actually doing the swapping
+    
+}
